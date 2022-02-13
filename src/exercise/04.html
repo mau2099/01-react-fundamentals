@@ -11,12 +11,15 @@
 
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+
+    const Message = ({className, children})=> <div className>{children}</div>
     const element = (
       <div className="container">
-        <div className="message">Hello World</div>
-        <div className="message">Goodbye World</div>
+        {Message({className: 'message', children: 'Hellow World!'})}
+        {Message({className: 'message', children: 'Goodbye World!!'})}
       </div>
     )
+
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
