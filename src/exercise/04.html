@@ -14,10 +14,10 @@
 
     const Message = ({className, age = 0, children})=> <div className={className}>{children}</div>
     const element = (
-      <div className="container">
+      <>
         <Message className='hola' age={1}>Hellow World!</Message>
         <Message className='bye'>Goodbye World!!</Message>
-      </div>
+      </>
     )
     const PropTypes = {
       number(props, propName, componentName) {
