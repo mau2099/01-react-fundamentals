@@ -12,11 +12,11 @@
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
 
-    const Message = ({className, children})=> <div className>{children}</div>
+    const Message = ({className, children})=> <div className={className}>{children}</div>
     const element = (
       <div className="container">
-        {Message({className: 'message', children: 'Hellow World!'})}
-        {Message({className: 'message', children: 'Goodbye World!!'})}
+        <Message className='hola'>Hellow World!</Message>
+        <Message className='bye'>Goodbye World!!</Message>
       </div>
     )
 
