@@ -4,11 +4,12 @@
 import * as React from 'react'
 
 function UsernameForm({onSubmitUsername}) {
-  const inputRef = React.useRef(null);
+  const inputRef = React.useRef();
   // 🐨 add a submit event handler here (`handleSubmit`).
   const handleSubmit = (event) => {
     event.preventDefault();
-    const username = event.target.elements.username.value;
+    console.log('-->', inputRef.current);
+    const username = inputRef.current.value;
     onSubmitUsername(username);
   }
   // 💰 Make sure to accept the `event` as an argument and call
