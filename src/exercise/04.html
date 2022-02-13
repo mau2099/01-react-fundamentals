@@ -12,15 +12,15 @@
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
 
-    const Message = ({className, age = 0, children})=> <div className={className}>{children}</div>
+    const Message = ({className, age, children})=> <div className={className}>{children}</div>
     const element = (
       <>
-        <Message className='hola' age={1}>Hellow World!</Message>
+        <Message className='hola' age='asdasdad'>Hellow World!</Message>
         <Message className='bye'>Goodbye World!!</Message>
       </>
     )
     const PropTypes = {
-      number(props, propName, componentName) {
+      age(props, propName, componentName) {
         if (typeof props[propName] !== 'number') {
           return new Error(`property ${propName} must be a number. Component: ${componentName}`)
         }
@@ -28,7 +28,7 @@
     }
 
     Message.propTypes = {
-      age: PropTypes.number,
+      age: PropTypes.age,
     }
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
