@@ -14,5 +14,7 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v2
 
-      - name: ▶️ Run setup script
-        run: npm run test
+      - name: ▶️ Run unit tests
+        run: |
+          npm ci
+          npm run test
