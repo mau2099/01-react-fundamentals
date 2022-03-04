@@ -11,6 +11,9 @@ jobs:
         node: [14]
     runs-on: ${{ matrix.os }}
     steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
       - name: ▶️ Run unit tests
         run: |
           npm ci
